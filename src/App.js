@@ -6,7 +6,7 @@ import {Container,Row,Col} from 'react-bootstrap';
 
 const App = () => {
 
- const [user,setUser]=useState([])
+ const [user,setUser]=useState([]);
 
  const addUser=(newUser)=>{
   setUser([...user,newUser])
@@ -22,8 +22,8 @@ const App = () => {
 
       
       <Row style={{border:"1px solid white",borderRadius:"10px",backgroundColor:"rgba(0,0,0,0.6)"
-       ,boxShadow:"15px 15px 15px grey",overFlow:"scroll" }} >
-          <h1 style={{textAlign:"center",color:"navajowhite",}}>RequestList</h1>
+       ,boxShadow:"15px 15px  15px  grey" }} >
+          <h1 style={{textAlign:"center",color:"navajowhite"}}>RequestList</h1>
 
         <Col>
         <FormList data={addUser} />

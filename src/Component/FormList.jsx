@@ -11,7 +11,7 @@ const FormList = (props) => {
   const handleSubmit=(event)=>{
 event.preventDefault();
 
-if(name.length>0 && email.length>0){
+if(name.length>0 && email.length>0 && tel.length>0){
   
   let newUser={
   name:name,
