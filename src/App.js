@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import './App.css';
-import FormList from './Component/FormList'
+import FormList from './Component/FormList';
 import RequestList from './Component/RequestList';
 import {Container,Row,Col} from 'react-bootstrap';
 
@@ -12,7 +12,30 @@ const App = () => {
   setUser([...user,newUser])
 
  }
- console.log(user)
+
+ const editUser=(userId,newEdit)=>{
+let edited= user.map((user)=>{
+  if(user.id===userId){
+    return newEdit
+  }else{
+    return user
+  }
+})
+setUser(edited)
+ }
+
+ const deleteUser=(userId)=>{
+let erase= user.filter(use => use.id !== userId
+
+)
+setUser(erase)
+console.log(erase)
+}
+  
+
+ 
+
+ //console.log(user)
  
   return (
     <Container className="" style={{backgroundColor:"rgb(221, 221, 235)",maxWidth:"100vw",height:"100vh",display:"flex",
@@ -32,7 +55,7 @@ const App = () => {
 
         <Col>
         
-        <RequestList  list={user} />
+        <RequestList  list={user} edit={editUser} delete={deleteUser} />
         </Col>
 
       </Row>

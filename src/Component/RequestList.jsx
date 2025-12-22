@@ -1,4 +1,5 @@
 import React from 'react'
+import Items from './Items'
 
 const RequestList = (props) => {
   //console.log(props.list)
@@ -16,12 +17,12 @@ const RequestList = (props) => {
        {props.list.map((user)=>{
         //console.log(user.name) 
         return <div style={{color:"rgba(204, 158, 154, 1)"}} key={user.id} >
-          {user.name}<br/>
-          {user.email}<br/>
-          {user.tel}<hr/>
+          <Items detail={user} edited={props.edit} deleted={props.delete}/>
         </div>
+        
        })}
        </div>
+       
       </div> 
   )
 }
