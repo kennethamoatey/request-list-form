@@ -14,11 +14,11 @@ const App = () => {
  }
 
  const editUser=(userId,newEdit)=>{
-let edited= user.map((user)=>{
-  if(user.id===userId){
+let edited= user.map((used)=>{
+  if(used.id===userId){
     return newEdit
   }else{
-    return user
+    return used
   }
 })
 setUser(edited)
@@ -29,7 +29,7 @@ let erase= user.filter(use => use.id !== userId
 
 )
 setUser(erase)
-console.log(erase)
+
 }
   
 
@@ -44,7 +44,7 @@ console.log(erase)
       backgroundAttachment:"fixed" }}  > 
 
       
-      <Row style={{border:"1px solid white",borderRadius:"10px",backgroundColor:"rgba(0,0,0,0.6)"
+      <Row style={{border:"1px solid white",borderRadius:"10px",backgroundColor:"rgba(0, 0, 0, 0.4)"
        ,boxShadow:"15px 15px  15px  grey" }} >
           <h1 style={{textAlign:"center",color:"navajowhite"}}>RequestList</h1>
 
