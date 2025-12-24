@@ -14,10 +14,10 @@ const RequestList = (props) => {
 
        <div style={{height:"300px",overflow:"hidden scroll"}}> 
 
-       {props.list.map((user)=>{
+       {props.list.map((individualUser)=>{
         //console.log(user.name) 
-        return <div style={{color:"rgba(204, 158, 154, 1)"}} key={user.id} >
-          <Items detail={user} edited={props.edit} deleted={props.delete}/>
+        return <div style={{color:"rgba(204, 158, 154, 1)"}} key={individualUser.id} >
+          <Items detail={individualUser} edited={props.edit} deleted={props.delete}/>
         </div>
         
        })}

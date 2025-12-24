@@ -14,18 +14,18 @@ const App = () => {
  }
 
  const editUser=(userId,newEdit)=>{
-let edited= user.map((used)=>{
-  if(used.id===userId){
+let edited= user.map((individualUser)=>{
+  if(individualUser.id===userId){
     return newEdit
   }else{
-    return used
+    return individualUser
   }
 })
 setUser(edited)
  }
 
  const deleteUser=(userId)=>{
-let erase= user.filter(use => use.id !== userId
+let erase= user.filter(individualUser => individualUser.id !== userId
 
 )
 setUser(erase)
